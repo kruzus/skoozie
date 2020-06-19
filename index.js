@@ -32,9 +32,9 @@ function uptime(){
    const uptime = Math.floor(os.uptime() / 60);
    if(uptime > 60){
        let hours = uptime / 60;
-       console.log(`Your PC is running for ${hours.toFixed(2)} hours.`)
+       console.log(`Your PC is running for ${Math.round(hours)} hours.`)
    } else {
-    console.log(`Your PC is running for ${uptime.toFixed(1)} minutes.`)
+    console.log(`Your PC is running for ${Math.round(uptime)} minutes.`)
    }
 }
 uptime();

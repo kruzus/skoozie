@@ -1,8 +1,15 @@
-# Project Overview
-In this project I wanted to learn how to publish NPM package and make it
-open source so others could learn with me.
+# Skoozie! 
+Simple tool to display current system information using Node std libraries. 
 
-## More will be added throughout this project or maybe changed/fixed.
+This tool is intended for learning purposes and trying to make a NPX skoozie where  you can just run and see your current status on your system.
 
-current version: 0.0.2
+## Version
+0.0.2
+
+## Scripts 
+
+There are 2 scripts: skoozie and old.
+
+Old: runs without any tables
+Skoozie: is Table one.
 
