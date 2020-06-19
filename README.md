@@ -13,3 +13,6 @@ There are 2 scripts: skoozie and old.
 Old: runs without any tables
 Skoozie: is Table one.
 
+## TEST
+
+![alt text](./assets/image_1.png)
