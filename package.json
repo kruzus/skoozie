@@ -1,0 +1,19 @@
+{
+  "name": "skoozle",
+  "version": "0.0.2",
+  "description": "Simple project to learn NPM publishing",
+  "main": "index.js",
+  "scripts": {
+    "skoozie": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kruzus/node_app.git"
+  },
+  "author": "Bek Alimov <kruzus@live.com> (https://www.github.com/kruzus)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kruzus/node_app/issues"
+  },
+  "homepage": "https://github.com/kruzus/node_app#readme"
+}
