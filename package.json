@@ -1,20 +1,24 @@
 {
-  "name": "skoozle",
-  "version": "0.0.2",
-  "description": "Simple project to learn NPM publishing",
-  "main": "index.js",
+  "name": "skoozie",
+  "version": "1.0.0",
+  "description": "simple tool",
+  "main": "src/index.js",
   "scripts": {
     "skoozie": "node ./src/index.js",
-    "old": "node index.js"
+    "old": "node ./src/old.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kruzus/node_app.git"
+    "url": "git+https://github.com/kruzus/skoozie.git"
   },
   "author": "Bek Alimov <kruzus@live.com> (https://www.github.com/kruzus)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kruzus/node_app/issues"
+    "url": "https://github.com/kruzus/skoozie/issues"
   },
-  "homepage": "https://github.com/kruzus/node_app#readme"
+  "homepage": "https://github.com/kruzus/skoozie#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "table": "^5.4.6"
+  }
 }

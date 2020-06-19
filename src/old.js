@@ -27,15 +27,14 @@ const mem2 = totalMem;
 
 console.log(`your total memory is ${mem2.toFixed(2)} GB`);
 
-function uptime(){
-
-   const uptime = Math.floor(os.uptime() / 60);
-   if(uptime > 60){
-       let hours = uptime / 60;
-       console.log(`Your PC is running for ${Math.round(hours)} hours.`)
-   } else {
-    console.log(`Your PC is running for ${Math.round(uptime)} minutes.`)
-   }
+function uptime() {
+  const uptime = Math.floor(os.uptime() / 60);
+  if (uptime > 60) {
+    let hours = uptime / 60;
+    console.log(`Your PC is running for ${Math.round(hours)} hours.`);
+  } else {
+    console.log(`Your PC is running for ${Math.round(uptime)} minutes.`);
+  }
 }
 uptime();
 

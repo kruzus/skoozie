@@ -1,5 +1,5 @@
 const { table } = require("table");
-const chalk = require('chalk');
+const chalk = require("chalk");
 const os = require("os");
 const arch = os.arch();
 const CPU = os.cpus()[0].model;
@@ -10,17 +10,11 @@ const totalMem = os.totalmem() / 1024 / 1024 / 1024;
 
 //for some reason the time is fixed and it's not being updated when we run node index.js....
 function uptime() {
-  let uptime = Math.round(os.uptime());
+  const uptime = Math.round(os.uptime()); //returns in seconds
+  const hours = Math.round(uptime / 60 / 60); // gives us hours
+  const mins = Math.round(uptime / 60);
 
-  if(uptime < 60) {
-    const hours = uptime / 60 / 60;
-    return `${Math.round(hours)} hours`;
-  } else {
-    const min = uptime /  60; //to get mins
-    return `${Math.round(min)} mins`
-  }
-
- 
+  return `hours is ${hours} mins ${mins}`;
 }
 
 function whatOS() {
@@ -39,18 +33,19 @@ function whatOS() {
   }
 }
 
-
-
 const data = [
-  [`${chalk.cyan('Architecture')}`, `${chalk.green(arch)} `],
-  [`${chalk.cyan('CPU')}`, `${chalk.green(CPU)}`],
-  [`${chalk.cyan('Free Memory')}`, `${chalk.green(freeMem.toFixed(2) + "GB")}`],
-  [`${chalk.cyan('Homedir')}`, `${chalk.green(homeDir)}`],
-  [`${chalk.cyan('Hostname')}`, `${chalk.green(os.hostname())}`],
-  [`${chalk.cyan('OS release')}`, `${chalk.green(os.release())}`],
-  [`${chalk.cyan('Total Memory')}`, `${chalk.green(totalMem.toFixed(2) + "GB")} `],
-  [`${chalk.cyan('Uptime')}`, chalk.green(uptime())],
-  [`${chalk.cyan('Current OS')}`, chalk.green(whatOS())],
+  [`${chalk.cyan("Architecture")}`, `${chalk.green(arch)} `],
+  [`${chalk.cyan("CPU")}`, `${chalk.green(CPU)}`],
+  [`${chalk.cyan("Free Memory")}`, `${chalk.green(freeMem.toFixed(2) + "GB")}`],
+  [`${chalk.cyan("Homedir")}`, `${chalk.green(homeDir)}`],
+  [`${chalk.cyan("Hostname")}`, `${chalk.green(os.hostname())}`],
+  [`${chalk.cyan("OS release")}`, `${chalk.green(os.release())}`],
+  [
+    `${chalk.cyan("Total Memory")}`,
+    `${chalk.green(totalMem.toFixed(2) + "GB")} `,
+  ],
+  [`${chalk.cyan("Uptime")}`, chalk.green(uptime())],
+  [`${chalk.cyan("Current OS")}`, chalk.green(whatOS())],
 ];
 
 const output = table(data);
