@@ -19,6 +19,6 @@
   "homepage": "https://github.com/kruzus/skoozie#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "table": "^5.4.6"
+    "table": "^6.9.0"
   }
 }
